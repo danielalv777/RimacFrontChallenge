@@ -22,6 +22,7 @@ export default function useHome() {
         control,
         register,
         setValue,
+        trigger,
         reset,
         clearErrors,
         handleSubmit,
@@ -49,6 +50,11 @@ export default function useHome() {
         })
     }, []);
 
+    const handleChangeCheck = useCallback((value, field) => {
+        setValue(field, value);
+        trigger(field);
+    }, [setValue])
+
     const handleChangeDocumentType = useCallback((type) => {
         setValue(FIELD_USER_DOCUMENT_TYPE, type.value)
     },[setValue])
@@ -63,5 +69,6 @@ export default function useHome() {
         submit: submit,
         handleChangeDocumentType: handleChangeDocumentType,
         isLoading: authLoginMutation.isLoadingLogin,
+        handleChangeCheck: handleChangeCheck,
     };
 }

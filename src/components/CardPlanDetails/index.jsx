@@ -40,7 +40,7 @@ function CardPlanDetails({
 
 CardPlanDetails.propTypes = {
     iconCardName: PropTypes.string,
-    costPlan: PropTypes.string,
+    costPlan: PropTypes.number,
     planDescription: PropTypes.array,
     selectPlan: PropTypes.func,
 }
