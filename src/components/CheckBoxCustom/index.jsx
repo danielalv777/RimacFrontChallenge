@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
 import classnames from "../../utils/classnames";
 
 // Styles
-import "./CheckBox.scss";
+import "./CheckBoxCustom.scss";
 
 // Icons
 import CheckIcon from "../../assets/commons/check-icon";
 
-function CheckBox({
+export default function CheckBoxCustom({
     containerCheckboxClassName,
     textLabel,
     classNameCheck,
@@ -69,7 +69,7 @@ function CheckBox({
     );
 };
 
-CheckBox.propTypes = {
+CheckBoxCustom.propTypes = {
     containerCheckboxClassName: PropTypes.string,
     textLabel: PropTypes.string,
     classNameCheck: PropTypes.string,
@@ -77,5 +77,3 @@ CheckBox.propTypes = {
     error: PropTypes.string,
     isChecked: PropTypes.bool,
 };
-
-export default CheckBox;
