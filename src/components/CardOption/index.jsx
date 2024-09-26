@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // Components
-import CheckBox from "../CheckBox";
+import CheckBoxCustom from "../CheckBoxCustom";
 
 // Utils
 import classnames from "../../utils/classnames";
@@ -46,7 +46,7 @@ function CardOption({
             ])}
         >
             <div className="card-header">
-                <CheckBox classNameCheck="card-checkbox" onChange={handleChangeCard} isChecked={isSelected} />
+                <CheckBoxCustom classNameCheck="card-checkbox" onChange={handleChangeCard} isChecked={isSelected} />
             </div>
             <div className="container-card-info">
                 <div className="container-icon-card-detail">

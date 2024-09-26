@@ -4,7 +4,7 @@ import useHome from "./useHome";
 // Components
 import InputText from "../../components/InputText";
 import SelectInput from "../../components/SelectInput";
-import CheckBox from "../../components/CheckBox";
+import CheckBoxCustom from "../../components/CheckBoxCustom";
 import Footer from "../../commons/footer";
 
 // Images
@@ -70,14 +70,14 @@ function Home() {
                             error={errors[FIELD_USER_PHONE_NUMBER]?.message}
                         />
 
-                        <CheckBox
+                        <CheckBoxCustom
                             textLabel="Acepto la Política de Privacidad"
                             containerCheckboxClassName="checkbox-home" 
                             onChange={(value) => handleChangeCheck(value, FIELD_PRIVACITY_POLITIC)}
                             error={errors[FIELD_PRIVACITY_POLITIC]?.message}
                         /> 
 
-                        <CheckBox
+                        <CheckBoxCustom
                             textLabel="Acepto la Política Comunicaciones Comerciales"
                             containerCheckboxClassName="checkbox-home-phone" 
                             onChange={(value) => handleChangeCheck(value, FIELD_COMMUNICATIONS_POLITIC)}
