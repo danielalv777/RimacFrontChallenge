@@ -1,8 +1,11 @@
 {
   "name": "softek-rimac",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
+  "engines": {
+    "node": "18.19.1"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
