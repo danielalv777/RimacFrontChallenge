@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import classnames from "../../utils/classnames";
 
 // Styles
-import "./Checkbox.scss";
+import "./CheckBox.scss";
 
 // Icons
 import CheckIcon from "../../assets/commons/check-icon";
