@@ -32,6 +32,7 @@ function Home() {
         submit,
         handleChangeDocumentType,
         isLoading,
+        handleChangeCheck,
     } = useHome();
 
     return (
@@ -71,31 +72,20 @@ function Home() {
                             error={errors[FIELD_USER_PHONE_NUMBER]?.message}
                         />
 
-                        <Controller 
-                            control={control}
-                            name={FIELD_PRIVACITY_POLITIC}
-                            render={({ field }) => (
-                                <Checkbox
-                                    textLabel="Acepto la Política de Privacidad"
-                                    containerCheckboxClassName="checkbox-home" 
-                                    onChange={option => field.onChange(option)}
-                                    error={errors[FIELD_PRIVACITY_POLITIC]?.message}
-                                /> 
-                            )}
-                        />
+                        <Checkbox
+                            textLabel="Acepto la Política de Privacidad"
+                            containerCheckboxClassName="checkbox-home" 
+                            onChange={(value) => handleChangeCheck(value, FIELD_PRIVACITY_POLITIC)}
+                            error={errors[FIELD_PRIVACITY_POLITIC]?.message}
+                        /> 
 
-                        <Controller 
-                            control={control}
-                            name={FIELD_COMMUNICATIONS_POLITIC}
-                            render={({ field }) => (
-                                <Checkbox
-                                    textLabel="Acepto la Política Comunicaciones Comerciales"
-                                    containerCheckboxClassName="checkbox-home-phone" 
-                                    onChange={option => field.onChange(option)}
-                                    error={errors[FIELD_COMMUNICATIONS_POLITIC]?.message}
-                                /> 
-                            )}
-                        />
+                        <Checkbox
+                            textLabel="Acepto la Política Comunicaciones Comerciales"
+                            containerCheckboxClassName="checkbox-home-phone" 
+                            onChange={(value) => handleChangeCheck(value, FIELD_COMMUNICATIONS_POLITIC)}
+                            error={errors[FIELD_COMMUNICATIONS_POLITIC]?.message}
+                        /> 
+
                         <div className="container-terms-home">
                             <a href="#" className="a-terms-home">Aplican Términos y Condiciones.</a>
                         </div>
