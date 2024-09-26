@@ -4,7 +4,7 @@ import useHome from "./useHome";
 // Components
 import InputText from "../../components/InputText";
 import SelectInput from "../../components/SelectInput";
-import Checkbox from "../../components/CheckBox";
+import CheckBox from "../../components/CheckBox";
 import Footer from "../../commons/footer";
 
 // Images
@@ -19,13 +19,11 @@ import { documentOptions, defaultOption, FIELD_USER_PHONE_NUMBER, FIELD_USER_DOC
 
 // Styles
 import "./Home.scss";
-import { Controller } from "react-hook-form";
 
 function Home() {
 
     const {
         formRef,
-        control,
         errors,
         register,
         handleSubmit,
@@ -72,14 +70,14 @@ function Home() {
                             error={errors[FIELD_USER_PHONE_NUMBER]?.message}
                         />
 
-                        <Checkbox
+                        <CheckBox
                             textLabel="Acepto la Política de Privacidad"
                             containerCheckboxClassName="checkbox-home" 
                             onChange={(value) => handleChangeCheck(value, FIELD_PRIVACITY_POLITIC)}
                             error={errors[FIELD_PRIVACITY_POLITIC]?.message}
                         /> 
 
-                        <Checkbox
+                        <CheckBox
                             textLabel="Acepto la Política Comunicaciones Comerciales"
                             containerCheckboxClassName="checkbox-home-phone" 
                             onChange={(value) => handleChangeCheck(value, FIELD_COMMUNICATIONS_POLITIC)}

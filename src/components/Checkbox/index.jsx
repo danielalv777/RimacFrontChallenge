@@ -1,17 +1,17 @@
 // Librarys
 import PropTypes from "prop-types";
-import { memo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // Utils
 import classnames from "../../utils/classnames";
 
 // Styles
-import "./Checkbox.scss";
+import "./CheckBox.scss";
 
 // Icons
 import CheckIcon from "../../assets/commons/check-icon";
 
-function Checkbox({
+function CheckBox({
     containerCheckboxClassName,
     textLabel,
     classNameCheck,
@@ -69,7 +69,7 @@ function Checkbox({
     );
 };
 
-Checkbox.propTypes = {
+CheckBox.propTypes = {
     containerCheckboxClassName: PropTypes.string,
     textLabel: PropTypes.string,
     classNameCheck: PropTypes.string,
@@ -78,4 +78,4 @@ Checkbox.propTypes = {
     isChecked: PropTypes.bool,
 };
 
-export default memo(Checkbox)
+export default CheckBox;
