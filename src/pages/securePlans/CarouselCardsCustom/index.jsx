@@ -12,7 +12,7 @@ import RigthtArrow from "../../../assets/Planes/cardDetails/rigth-arrow-circle.s
 // Styles
 import "./CarouselCards.scss";
 
-function CarouselCards({
+function CarouselCardsCustom({
     arrayOptions,
     handleSelectPlan,
 }) {
@@ -57,9 +57,9 @@ function CarouselCards({
     );
 };
 
-CarouselCards.propTypes = {
+CarouselCardsCustom.propTypes = {
     arrayOptions: PropTypes.array,
     handleSelectPlan: PropTypes.func,
 }
 
-export default CarouselCards;
+export default CarouselCardsCustom;
