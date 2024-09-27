@@ -115,9 +115,13 @@
     justify-content: space-between;
     margin-top: 2rem;
 }
-.containers-plans-details {
+.containers-plans-details-desktop {
     display: flex;
     flex-direction: row;
+}
+
+.containers-plans-details-mobile {
+    display: none;
 }
 
 /* ===== Resume ===== */
@@ -235,5 +239,14 @@
     }
     .container-resume-plan {
         padding: 0;
+    }
+    .containers-plans-details-desktop {
+        display: none;
+    }
+    .containers-plans-details-mobile {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
     }
   }

@@ -7,7 +7,6 @@ import CircleNumber from "../../components/CircleNumber";
 // Icons
 import LinerHeader from "../../assets/Planes/header/line.svg";
 import IconBack from "../../assets/Planes/header/Icon-button-back.svg";
-import IconProgressBar from "../../assets/Planes/header/atoms_stepper_progress.svg";
 import IconBackMobile from "../../assets/Planes/header/back-mobile.svg";
 
 // Utils
@@ -58,7 +57,7 @@ function HeaderSecurePlan({
                 </button>
                 <div className="container-steps-mobile">
                     <span className="steps-number-mobile">{currentStep === "selectPlan" ? 'PASO 1 DE 2' : 'PASO 2 DE 2'}</span>
-                    <img src={IconProgressBar} alt="progressBar" />
+                    <progress value={currentStep === "selectPlan" ? 0.1 : 1} />
                 </div>
             </div>
         </div>
