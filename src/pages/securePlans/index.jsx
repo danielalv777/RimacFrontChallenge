@@ -5,6 +5,7 @@ import useSecurePlan from "./useSecurePlan";
 import HeaderSecurePlan from "./headerSecurePlan";
 import CardOption from "../../components/CardOption";
 import CardPlanDetails from "../../components/CardPlanDetails";
+import CarouselCards from "./Carousel/carouselCards";
 import ResumePlan from "./resumePlan";
 
 // Styles
@@ -54,7 +55,7 @@ function SecurePlanes() {
                         />
                     </div>
 
-                    <div className="containers-plans-details">
+                    <div className="containers-plans-details-desktop">
                         {plansArray.map((plan, index) => (
                             <CardPlanDetails 
                                 key={index}
@@ -64,6 +65,13 @@ function SecurePlanes() {
                                 selectPlan={() => handleSelectPlan(plan)}
                             />
                         ))}
+                    </div>
+
+                    <div className="containers-plans-details-mobile">
+                        <CarouselCards 
+                            arrayOptions={plansArray}
+                            handleSelectPlan={handleSelectPlan}
+                        />
                     </div>
                 </div>
             )}
