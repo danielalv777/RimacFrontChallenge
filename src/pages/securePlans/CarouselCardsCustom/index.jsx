@@ -10,7 +10,7 @@ import LeftArrow from "../../../assets/Planes/cardDetails/left-arrow-circle.svg"
 import RigthtArrow from "../../../assets/Planes/cardDetails/rigth-arrow-circle.svg";
 
 // Styles
-import "./CarouselCards.scss";
+import "./CarouselCardsCustom.scss";
 
 function CarouselCardsCustom({
     arrayOptions,
@@ -44,15 +44,17 @@ function CarouselCardsCustom({
                     />
                 ))}
             </div>
-            <div className="container-buttons-next-previous">
-                <button className="carousel-button left" onClick={prevSlide}>
-                    <img src={LeftArrow} alt="left-arrow-carousel" />
-                </button>
-                <span className="span-carousel-pages">{(currentIndex + 1) + ' / ' + arrayOptions.length}</span>
-                <button className="carousel-button right" onClick={nextSlide}>
-                    <img src={RigthtArrow} alt="rigth-arrow-carousel" />
-                </button>
-            </div>
+            {(arrayOptions.length > 0) && (
+                <div className="container-buttons-next-previous">
+                    <button className="carousel-button left" onClick={prevSlide}>
+                        <img src={LeftArrow} alt="left-arrow-carousel" />
+                    </button>
+                    <span className="span-carousel-pages">{(currentIndex + 1) + ' / ' + arrayOptions.length}</span>
+                    <button className="carousel-button right" onClick={nextSlide}>
+                        <img src={RigthtArrow} alt="rigth-arrow-carousel" />
+                    </button>
+                </div>
+            )}
         </div>
     );
 };
